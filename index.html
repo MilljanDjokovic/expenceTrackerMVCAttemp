@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Expences Tracker With Firebase</title>
+</head>
+<body>
+    <div class="container" >
+        <div class="intro">
+            <h1 class="welcome">Welcome to Expence Tracker! <br> Helps You to control all Your expences!</h1>
+        </div>
+
+        <div id="outputMessage" class="outputMessage">
+    
+        </div>
+       
+        <div class="expences">
+            <div>
+                <form id="expencesForm" class="expencesForm">
+                    <div class="expence">
+                        <label for="expence">Expence:</label>
+                        <input type="text" name="expence" id="expence" placeholder="Name Your expence">
+                    </div>
+                    <div class="expenceAmount">
+                        <label for="amount">Amount:</label>
+                        <input type="number" name="amount" id="amount" placeholder="Enter expence amount">
+                    </div>
+                    <div class="expenceMonth">
+                        <label for="expenceMonth">Expence month:</label>
+                        <input type="month" name="month" id="expenceMonth">
+                    </div>
+                    <div class="expenceTime">
+                        <label for="expenceTime">Expence time:</label>
+                        <input type="time" name="time" id="expenceTime">
+                    </div>
+                    <div class="submit">
+                        <input id="button" type="submit" value="Add Your expence">
+                    </div>
+                </form>
+            </div>
+    
+            <div class="expencesTable">
+                <h2 class="expenceInfo">Expence informations</h2>
+                <table>
+                    <tr class="tableHeads">
+                        <th><i class="fas fa-file-invoice-dollar fa-2x"></i></th>
+                        <th><i class="fas fa-euro-sign fa-2x"></th>
+                        <th><i class="far fa-calendar-alt fa-2x"></i></th>
+                        <th><i class="far fa-clock fa-2x"></i></th>
+                        <th><i class="fas fa-trash-alt fa-2x"></i></th>
+                    </tr>
+                    <tbody id='outputData'>
+                    
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+
+        <div>
+            <div class="output">
+                <p>Total amount of your expences is <span id="sumExpences">0</span> <i class="fas fa-euro-sign"></i>.</p>
+                <p>The highest expense amouont is <span id="highestExpence">0</span> <i class="fas fa-euro-sign"></i>.</p>
+            </div>
+        </div>
+    </div>
+
+
+<script src="/app.js"></script>
+</body>
+</html>
